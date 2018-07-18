@@ -1,0 +1,18 @@
+<view wx:if="{{hasShortcut}}" id="keyboard-pad" class="padding-tb">
+    <shortcut-view prop-shortcuts="{{shortcuts}}" bind:onkeyclick="onKeyClick" bind:onshowmoreclick="onShowMoreClick"  />
+</view>
+<view wx:else id="keyboard-pad" class="keyboard-pad padding-tb">
+    <row-view keys="{{keyboard.row0}}" row="{{0}}" keycount="{{kc}}" rowcount="{{rc}}" bind:onkeyclick="onKeyClick"
+              bind:onkeyevent="onKeyEvent"  />
+    <row-view keys="{{keyboard.row1}}" row="{{1}}" keycount="{{kc}}" rowcount="{{rc}}" bind:onkeyclick="onKeyClick"
+              bind:onkeyevent="onKeyEvent"  />
+    <row-view keys="{{keyboard.row2}}" row="{{21}}" keycount="{{kc}}" rowcount="{{rc}}" bind:onkeyclick="onKeyClick"
+              bind:onkeyevent="onKeyEvent"  />
+    <row-view keys="{{keyboard.row3}}" row="{{3}}" keycount="{{kc}}" rowcount="{{rc}}" bind:onkeyclick="onKeyClick"
+              bind:onkeyevent="onKeyEvent" isfunc="{{keyboard.row4.length == 0}}"  />
+    <row-view wx:if='{{keyboard.row4.length > 0}}' keys="{{keyboard.row4}}" keycount="{{kc}}" row="{{4}}" rowcount="{{rc}}"
+              bind:onkeyclick="onKeyClick" bind:onkeyevent="onKeyEvent" isfunc="{{true}}"  />
+    <view wx:if='{{tipText != ""}}' id="keytip" class="r-border" style="position:absolute;left:{{tipPosX}};top:{{tipPosY}}">
+    {{ tipText }}
+    </view>
+</view>

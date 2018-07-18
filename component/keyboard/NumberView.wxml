@@ -1,0 +1,9 @@
+<view id="input-widget" class="input-widget r-border">
+    <view id="mode-switcher" bindtap='onModeChanged' class='mode-switcher modeof-{{mode}}'/>
+    <view id="inputrow" class="inputrow">
+        <view class="cell" wx:for="{{numberArray}}" wx:for-item="item" wx:key="{{index}}"
+            class="lengthof-{{numberArray.length}}" selected="{{index == selectedIndex}}">
+            <button id="{{index}}" class="button key" style="border:none;" data-index='{{index}}' bindtap="onCellSelected">{{item}}</button>
+        </view>
+    </view>
+</view>

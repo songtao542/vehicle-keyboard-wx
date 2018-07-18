@@ -1,0 +1,9 @@
+.keyboard-pad{
+    padding: 0 5rpx;
+}
+
+.padding-tb{
+    padding-top: 20rpx;
+    
+}
+ 

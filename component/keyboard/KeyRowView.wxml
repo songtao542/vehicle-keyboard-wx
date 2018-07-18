@@ -1,0 +1,9 @@
+<view class='keyrow rowsof-{{rowcount}} {{isfunc === true?"funcrow":""}}'>
+    <view wx:for='{{keys}}' wx:for-item='item' class='keysof-{{keycount}}' wx:key='{{index}}'>
+        <button class='key r-border txt-key keycodeof-{{item.keyCode}} {{item.enabled?"":"disabled"}}'
+                id="{{'key'+(row*20+index)}}"bindtap="onButtonClick" disabled="{{!item.enabled}}" data-item='{{item}}'>
+        {{item.text}} 
+     <!--{{item.enabled}}-->
+        </button>
+    </view>
+</view>

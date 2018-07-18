@@ -1,0 +1,8 @@
+<!--component/ocr.wxml-->
+<view class='ocr'>
+  <canvas class='canvas' style="width: 360px; height: 360px;" id='ocrCanvas' canvas-id='ocrCanvas' disable-scroll="false" />
+  <!-- <view class="buttons">
+    <view class="button" catchtap="_chooseImage">重新选择</view>
+    <view class="button" catchtap="_decodeTarget">确定</view>
+  </view> -->
+</view>

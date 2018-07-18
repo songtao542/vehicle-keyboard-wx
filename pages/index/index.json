@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "测试",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "imb": "../../component/img-to-base64/img-to-base64",
+    "keyboard": "../../component/keyboard/MixedKeyboard"
+  }
+}

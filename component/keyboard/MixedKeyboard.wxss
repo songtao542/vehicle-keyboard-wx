@@ -1,0 +1,33 @@
+
+@import "./style.wxss";
+/* 输入框的高度，占比为 20% */
+.input-widget {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 20%;
+    text-align: center;
+    justify-content: center;
+    background: #ffffff;
+
+}
+/* 键盘框的高度，占比为 80% */
+.divider {
+    height: 3%;
+}
+.keyboard-pad{
+    height: 77%;
+}
+
+.rid-m-201708101425 {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: "PingFangSC-Regular", "Helvetica Neue", Arial, sans-serif;
+    background: #eef0f0;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+}

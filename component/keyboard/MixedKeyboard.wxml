@@ -1,0 +1,8 @@
+<view id="rid-m-201708101425" class="rid-m-201708101425">
+    <number-view number-array="{{numberArray}}" mode="{{displayMode}}" selected-index="{{selectedIndex}}"
+                     bind:onmodechanged="onUserSetMode" bind:oncellselected="onUserSelectedInput"  />
+    
+    <view id="divider" class="divider"  />
+    <keyboard-view keyboard="{{keyboard}}" keycount="{{keyCount}}" bind:onpadkeyclick="onClickPadKey"
+                   bind:onpadshowmoreclick="onClickShowALL"  />
+</view>

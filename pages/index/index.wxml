@@ -1,0 +1,37 @@
+<!--pages/plate/bind/bind.wxml-->
+<view style='height:100%;'>
+
+  <view class="input-block" bindtap='chooseImage'>
+    <text class="label">图片转Base64：</text>
+    <text class="label">选择图片</text>
+  </view>
+
+  <view class="input-block">
+    <text class="label">车牌颜色：</text>
+    <picker style='min-width:200rpx; flex-grow: 1;' bindtouchstart='startTouchPicker' bindchange="plateColorChange" value="{{vehicleColorIndex < 0 ? 0:vehicleColorIndex}}" range="{{vehicleColorArray}}">
+      <view wx:if="{{vehicleColorIndex >= 0}}" class="weui-input" style='text-align: left;padding-left:30rpx;'>{{vehicleColorArray[vehicleColorIndex]}}</view>
+      <view wx:else class="weui-input placeholder" style='text-align: left;padding-left:30rpx;'>请选择车牌颜色</view>
+    </picker>
+  </view>
+
+  <view class='input-block {{isKeyboardShow ? "input-border-bottom-focus":"input-border-bottom"}}' bindtap="toggleKeyboard">
+    <text class="label">车牌号：</text>
+    <text wx:if="{{inputValue}}" style='padding-left:30rpx;'>{{inputValue.length>2?inputValue:""}}</text>
+    <text wx:else class="placeholder" style='padding-left:30rpx;'>请输入车牌号</text>
+  </view>
+
+  <view class='b64'>---------base64--------</view>
+  <view class='base64'>{{base64}}</view>
+  <!--键盘-->
+  <block wx:if="{{isKeyboardShow}}">
+    <view class="keyboard-wrap">
+      <view class="keyboard-mask" catchtouchmove='doNothing' catchtap='toggleKeyboard'></view>
+      <keyboard args="{{keyboardValue}}" bind:oncommit="onPlateInputCompleted" bind:onmessage="onKeyboardMessage" style="width: 100%;" class="keyboard-view"></keyboard>
+    </view>
+  </block>
+
+</view>
+<!-- wx:if="{{showOcrView}}" -->
+<view class='imb'>
+  <imb id='imb' bind:oncomplete="onBaseComplete" bind:onerror="onOcrError"></imb>
+</view>

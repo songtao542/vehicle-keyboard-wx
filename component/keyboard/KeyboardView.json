@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+      "shortcut-view": "./ShortcutView",
+      "row-view": "./KeyRowView"
+
+  }
+}

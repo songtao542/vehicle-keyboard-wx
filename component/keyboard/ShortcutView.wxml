@@ -1,0 +1,9 @@
+<view style="height: 100%;">
+    <ul class="shortcut-row">
+        <li wx:for="{{shortcuts}}" wx:key="{{key}}" wx:for-item="item">
+            <button class="key txt-key r-border shortcut" tag="button" class="{{'keycodeof-' + item.keyCode}}"
+                    disabled="{{!item.enabled}}" data-item='{{item}}' bindtap="onButtonClick">{{ item.text }}</button>
+        </li>
+    </ul>
+    <view id="showall" class="showall" bindtap="onShowMoreClick">显示全部</view>
+</view>
