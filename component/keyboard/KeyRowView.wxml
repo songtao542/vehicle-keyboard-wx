@@ -3,7 +3,6 @@
         <button class='key r-border txt-key keycodeof-{{item.keyCode}} {{item.enabled?"":"disabled"}}'
                 id="{{'key'+(row*20+index)}}"bindtap="onButtonClick" disabled="{{!item.enabled}}" data-item='{{item}}'>
         {{item.text}} 
-     <!--{{item.enabled}}-->
         </button>
     </view>
 </view>

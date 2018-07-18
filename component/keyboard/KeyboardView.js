@@ -1,6 +1,5 @@
 // 实现键盘整体的UI操作逻辑
 // Author: 陈哈哈 yoojiachen@gmail.com
-
 var $ = require("./utils.js");
 Component({
     // keyboard 对象是键盘组件的数据对象，用于传递键盘每行的数据
@@ -14,7 +13,6 @@ Component({
                 this.setData({
                     rc: rc
                 })
-
                 var shortcuts = $.__arrayOf(newVal, "shortcuts");
                 if (shortcuts) {
                     var hasShortcut = shortcuts.length > 0;
@@ -51,15 +49,7 @@ Component({
         tipText: "",
         tipPosX: "0px",
         tipPosY: "0px",
-        // kc: Number,
-        // rc: Number,
-        // shortcuts: [],
-        // hasShortcut: []
     },
-
-    // data: function () {
-    //     return { tipText: "", tipPosX: "0px", tipPosY: "0px" };
-    // },
 
     methods: {
         onKeyEvent: function (params) {

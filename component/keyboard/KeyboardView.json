@@ -3,6 +3,5 @@
   "usingComponents": {
       "shortcut-view": "./ShortcutView",
       "row-view": "./KeyRowView"
-
   }
 }

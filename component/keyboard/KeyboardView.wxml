@@ -1,5 +1,5 @@
 <view wx:if="{{hasShortcut}}" id="keyboard-pad" class="padding-tb">
-    <shortcut-view prop-shortcuts="{{shortcuts}}" bind:onkeyclick="onKeyClick" bind:onshowmoreclick="onShowMoreClick"  />
+    <shortcut-view shortcuts="{{shortcuts}}" bind:onkeyclick="onKeyClick" bind:onshowmoreclick="onShowMoreClick"  />
 </view>
 <view wx:else id="keyboard-pad" class="keyboard-pad padding-tb">
     <row-view keys="{{keyboard.row0}}" row="{{0}}" keycount="{{kc}}" rowcount="{{rc}}" bind:onkeyclick="onKeyClick"

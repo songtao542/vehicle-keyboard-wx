@@ -1,8 +1,5 @@
-
-
 // 定义快捷省份的UI操作逻辑
 // Author: 陈哈哈 yoojiachen@gmail.com
-
 Component({
     // props: ["shortcuts"],
     properties: {
